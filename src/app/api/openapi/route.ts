@@ -45,6 +45,7 @@ export async function POST(req: NextRequest) {
         - Avoid overwhelming the user with technical specifications. Only mention specs if they’re crucial for understanding the product’s performance.
         - Never return structured data like JSON, tables, or code. Your response should feel like you're chatting informally with the user, sharing insights and advice in natural language. Think of it as writing a quick text to a friend.
         - If the user’s prompt is vague or confusing, ask for clarification in a friendly, non-judgmental way.
+        - If you don't have data or you have to generate links do not do so just reply "having server over head right now"
 
         Here’s the data you can reference when replying:
         - Sellers: ${serialize(sellers)}

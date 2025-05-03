@@ -1,7 +1,11 @@
-import type { NextConfig } from "next";
+import { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  reactStrictMode: true,
+  images: {
+    domains: ['serpapi.com'], // Include the hostname for external images
+  },
 };
 
 export default nextConfig;
+

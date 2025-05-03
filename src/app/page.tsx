@@ -2,11 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 export default function Home() {
   return (
-    <div className="text-charcoal h-screen w-full flex flex-col items-center justify-center" style={{backgroundColor:'#fff1e6'}}>
+    <div className="text-charcoal h-screen w-full flex flex-col items-center justify-center" style={{backgroundImage: "url('/assets/background1.jpg')",backgroundSize: "cover"}}>
+              
       <div id="logo"> 
-        <img src="/assets/Logo.png" className=""></img>
+        <img src="/assets/Logo.png" className="rounded-xl shadow-lg"></img>
       </div>
-      <h1 style={{color:'#36454F'}}className="text-3xl font-bold
+      <h1 style={{color:'#36454F'}}className="text-3xl font-bold pt-3
       ">Welcome to Hollow</h1>
       <div className="  rounded-3xl flex flex-row items-center">
         <Link href="/login">

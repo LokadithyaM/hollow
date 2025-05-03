@@ -38,7 +38,7 @@ export default function Signup(){
         }
     return(
         
-        <div className="text-black h-screen w-full flex flex-col items-center justify-center " style={{backgroundImage: "url('/assets/background.jpg')",backgroundSize: "cover"}}>
+        <div className="text-black h-screen w-full flex flex-col items-center justify-center " style={{backgroundImage: "url('/assets/background1.jpg')",backgroundSize: "cover"}}>
             
             <div id="logo"> 
                 <a href="/"><img src="/assets/Logo.png" className=""></img></a>

@@ -13,7 +13,7 @@ export async function POST(req: NextRequest) {
 
     console.log("Product to set:", product);
 
-    await redis.set(`product:dummy`, JSON.stringify(product), { EX: 300 });
+    await redis.set(`product:dummy`, JSON.stringify(product), { EX: 3000 });
 
     return NextResponse.json({ success: true });
   } catch (error) {

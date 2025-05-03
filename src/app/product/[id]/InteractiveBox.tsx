@@ -63,8 +63,8 @@ export default function InteractiveBox({ sellers, related, specs, ratings, filte
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto p-4 border rounded-lg bg-white shadow-sm">
-      <div className="mb-4 max-h-96 overflow-y-auto space-y-3 p-4 bg-gray-50 border rounded-md">
+    <div className="w-full h-full max-w-2xl mx-auto p-4 border rounded-lg bg-white shadow-sm">
+      <div className="mb-4 h-[500px] max-h-900 overflow-y-auto space-y-3 p-4 bg-gray-50 border rounded-md">
         {conversation.map((msg, index) => (
           <div
             key={index}
