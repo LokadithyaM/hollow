@@ -40,7 +40,17 @@ export default function Home() {
 
   const handleSearch = async () => {
     try {
-      const res = await axios.get(`/api/search?q=${query}`);
+
+      const searchaiRes = await axios.post("/api/searchai", { query });
+    
+      // Extract the cleaned query from the response
+      const cleanedQuery = searchaiRes.data.query;
+
+      if(!cleanedQuery){
+        console.error("No cleaned query returned from searchai");
+      }
+      
+      const res = await axios.get(`/api/search?q=${cleanedQuery}`);
       setResults(res.data.results || []);
 
       console.log("Search results:", res.data.results);
@@ -76,6 +86,8 @@ export default function Home() {
     // Only open the tab once data is definitely stored
     window.open(`/product/${product.product_id}`, "_blank");
   };
+
+
   
   
   

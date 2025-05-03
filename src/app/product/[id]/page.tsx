@@ -1,6 +1,8 @@
+
 import redis from "@/app/lib/redis";
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import InteractiveBox from "./InteractiveBox";
 import Link from "next/link";
 
 export default async function ProductPage({ params }: { params: { id: string } }) {
@@ -18,6 +20,7 @@ export default async function ProductPage({ params }: { params: { id: string } }
   const reviews = product?.serpapi_data?.reviews_results?.reviews || [];
 
   console.log(sellers, related, specs, ratings, filters, reviews);
+
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
@@ -152,6 +155,14 @@ export default async function ProductPage({ params }: { params: { id: string } }
           </div>
         )}
       </div>
+        <InteractiveBox
+        sellers={sellers}
+        related={related}
+        specs={specs}
+        ratings={ratings}
+        filters={filters}
+        reviews={reviews}
+      />
     </div>
   );
 }

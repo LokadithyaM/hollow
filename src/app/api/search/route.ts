@@ -23,6 +23,8 @@ export async function GET(request: Request) {
       },
     });
 
+    // console.log("API response:", response.data); // Log the entire response for debugging
+
     const shoppingResults = response.data.shopping_results || [];
 
     // console.log("Shopping results:", shoppingResults.slice(0, 15)); // Log first 5 items for brevity
