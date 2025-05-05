@@ -36,9 +36,6 @@ Gemini (Product + Review Context → Intelligent Responses)
 Display Final Recommendations
 ```
 
-## 📸 Demo Screenshots
-
-> *Add demo screenshots here (optional)*
 
 ## 🛠️ Setup Instructions
 
